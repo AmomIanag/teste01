@@ -1,31 +1,24 @@
-// Telemetria atualizável (valores fictícios aleatórios)
+// Telemetria atualizável
 
-const updateBtn =
-document.getElementById("updateBtn");
+const updateBtn = document.getElementById("updateBtn");
 
-updateBtn.addEventListener("click", () => {
+updateBtn.addEventListener("click", function () {
 
-    const temperatura =
-    Math.floor(Math.random() * 30) + 10;
+    const temperatura = Math.floor(Math.random() * 30) + 10;
+    const energia = Math.floor(Math.random() * 40) + 60;
 
-    const energia =
-    Math.floor(Math.random() * 40) + 60;
-
-    document.getElementById("temp")
-    .textContent = temperatura + "°C";
-
-    document.getElementById("energia")
-    .textContent = energia + "%";
-
-    document.getElementById("status")
-    .textContent = "Monitorando";
+    document.getElementById("temp").textContent = temperatura + "°C";
+    document.getElementById("energia").textContent = energia + "%";
+    document.getElementById("status").textContent = "Monitorando";
+    document.getElementById("comunicacao").textContent = "Estável";
 
 });
 
-const themeBtn =
-document.getElementById("themeBtn");
+// Alterar tema
 
-themeBtn.addEventListener("click", () => {
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", function () {
 
     document.body.classList.toggle("tema-claro");
 
@@ -33,18 +26,17 @@ themeBtn.addEventListener("click", () => {
 
 // Formulário
 
-const form =
-document.getElementById("missionForm");
+const form = document.getElementById("missionForm");
 
-form.addEventListener("submit", function(event){
+form.addEventListener("submit", function (event) {
 
     event.preventDefault();
 
-    const nome =
-    document.getElementById("nome").value;
+    const nome = document.getElementById("nome").value;
 
-    document.getElementById("message")
-    .textContent =
-    "Missão cadastrada com sucesso: " + nome;
+    document.getElementById("message").textContent =
+        "Missão cadastrada com sucesso: " + nome;
+
+    form.reset();
 
 });
