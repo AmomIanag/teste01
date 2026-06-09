@@ -22,6 +22,15 @@ updateBtn.addEventListener("click", () => {
 
 });
 
+const themeBtn =
+document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("tema-claro");
+
+});
+
 // Formulário
 
 const form =

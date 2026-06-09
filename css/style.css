@@ -30,14 +30,36 @@ body{
 header{
 
     display:flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items:center;
 
-    padding:20px 600px;
+    padding:20px;
 
     background:#07111f;
 
     border-bottom:1px solid #1b3d63;
+}
+
+.tema-claro{
+    background: #f4f4f4;
+    color: #111;
+}
+
+.tema-claro header,
+.tema-claro footer{
+    background: #dcdcdc;
+}
+
+.tema-claro .dashboard,
+.tema-claro .controle,
+.tema-claro .form-section{
+    background: white;
+    color: #111;
+}
+
+.tema-claro .card{
+    background: #e9e9e9;
+    color: #111;
 }
 
 .logo-container{
@@ -49,7 +71,7 @@ header{
 
 .logo{
 
-    width:150px;
+    width:80px;
 }
 
 /* Seção herói (a principal) */
